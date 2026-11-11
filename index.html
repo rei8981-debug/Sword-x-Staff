@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101923">
+<title>대보물 사냥 공략 | 소드 x 스태프</title>
+<style>
+:root{--bg:#0d151d;--panel:#15232e;--panel2:#1b2d39;--line:#2b414e;--text:#edf4f5;--muted:#a8bbc2;--mint:#7ce0c3;--gold:#f4cb79;--blue:#8cc8f2;--red:#f29b91}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#203744 0,transparent 38%),var(--bg);color:var(--text);font:16px/1.72 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--mint)}.wrap{max-width:1040px;margin:auto;padding:0 22px}.top{padding:42px 0 30px;border-bottom:1px solid var(--line)}.eyebrow{color:var(--mint);font-size:.82rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.top h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.15;margin:12px 0}.top p{max-width:720px;color:var(--muted);margin:0}.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.pill{border:1px solid var(--line);background:#14232c;border-radius:99px;padding:5px 11px;color:#c6d8dc;font-size:.82rem}
+nav{position:sticky;top:0;z-index:5;background:#0d151ded;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}nav .wrap{display:flex;gap:8px;overflow:auto;padding-top:10px;padding-bottom:10px}nav a{white-space:nowrap;text-decoration:none;color:#c5d5d9;font-size:.88rem;padding:6px 10px;border-radius:8px}nav a:hover{background:var(--panel2);color:var(--mint)}
+main{padding:28px 0 70px}.notice{border:1px solid #735e31;background:#332b1b;border-radius:14px;padding:15px 18px;color:#f5e4bd;margin-bottom:24px}.notice strong{color:var(--gold)}section{margin:30px 0;scroll-margin-top:76px}h2{font-size:1.55rem;margin:0 0 15px}h3{font-size:1.08rem;margin:0 0 8px;color:var(--mint)}p{margin:8px 0 12px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.card{background:linear-gradient(150deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:15px;padding:17px}.metric{font-size:1.8rem;font-weight:850;color:var(--gold);line-height:1.2;margin:7px 0}.small{font-size:.88rem;color:var(--muted)}.callout{border-left:3px solid var(--mint);padding:10px 14px;background:#14252b;border-radius:0 10px 10px 0;margin:14px 0}.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px}table{border-collapse:collapse;width:100%;min-width:560px;background:var(--panel)}th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}th{background:#1b303b;color:var(--mint);font-weight:750}tr:last-child td{border-bottom:0}.tag{display:inline-block;border-radius:6px;background:#263c47;padding:2px 7px;font-size:.8rem;color:#cce5e8}.gold{color:var(--gold)}.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}.steps{counter-reset:step;list-style:none;padding:0}.steps li{counter-increment:step;position:relative;padding:0 0 16px 42px}.steps li:before{content:counter(step);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#29434a;color:var(--mint);font-weight:800}.calc{background:var(--panel);border:1px solid var(--line);padding:18px;border-radius:15px}.calc label{display:block;color:var(--muted);font-size:.9rem;margin-bottom:6px}.calc input{width:100%;background:#0d171e;border:1px solid var(--line);border-radius:9px;color:var(--text);padding:11px;font:inherit}.calc button{border:0;background:var(--mint);color:#092019;border-radius:9px;padding:10px 15px;font-weight:800;margin-top:12px;cursor:pointer}.result{margin-top:12px;padding:12px;background:#102b2b;border-radius:9px;color:#d8fff2}.footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--muted);font-size:.86rem}.footer a{word-break:break-all}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.cols{grid-template-columns:1fr}.wrap{padding-left:16px;padding-right:16px}.top{padding-top:30px}.card{padding:15px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<div class="eyebrow">SWORD × STAFF · COMMUNITY GUIDE</div>
+<h1>대보물 사냥<br><span style="color:var(--gold)">무과금부터 과금 유저까지</span></h1>
+<p>매주 보상을 급하게 교환하기보다 에너지를 모아 원하는 Lv.5 보상을 노리는 이벤트 운영 가이드입니다. 영상 스크립트를 바탕으로 한국어로 정리했습니다.</p>
+<div class="meta"><span class="pill">한국 서버 참고용</span><span class="pill">이벤트 재화 운영</span><span class="pill">초보·무과금 추천</span></div>
+</div></header>
+<nav><div class="wrap">
+<a href="#summary">핵심 요약</a><a href="#energy">에너지 계산</a><a href="#rewards">보상 선택</a><a href="#strategy">플레이 유형별 전략</a><a href="#spend">패키지 효율</a><a href="#check">교환 전 체크</a>
+</div></nav>
+<main class="wrap">
+<div class="notice"><strong>확인 안내</strong><br>이 페이지는 공유된 해외 영상 스크립트를 번역·정리한 자료입니다. 영상에 나온 수치와 추천이 한국 서버에서도 동일한지 별도로 검증된 것은 아닙니다. 이벤트 표기, 보상 구성, 가격은 서버 업데이트에 따라 달라질 수 있으니 게임 내 정보를 최종 기준으로 확인하세요.</div>
+
+<section id="summary">
+<h2>먼저 알아둘 핵심</h2>
+<div class="grid">
+<div class="card"><div class="small">주간 무료 수급량</div><div class="metric">약 2,240</div><div class="small">이벤트 퀘스트와 무료 상점 보상 기준</div></div>
+<div class="card"><div class="small">Lv.5 첫 보상까지</div><div class="metric">3,240</div><div class="small">Lv.1~4 진행 비용 2,040 + Lv.5 보상 1개 1,200</div></div>
+<div class="card"><div class="small">2주 모아 사용</div><div class="metric">약 4,480</div><div class="small">Lv.5 보상 2개를 노릴 수 있는 분량</div></div>
+</div>
+<div class="callout"><strong>핵심 전략:</strong> 매주 무조건 소비하지 말고 에너지를 이월해 원하는 Lv.5 보상이 등장했을 때 교환하세요. 무과금은 보통 <b>한 주 모으고 다음 주 소비</b>하는 흐름이 기본입니다.</div>
+</section>
+
+<section id="energy">
+<h2>에너지 소모 구조</h2>
+<div class="tablewrap"><table><thead><tr><th>단계</th><th>필요 에너지</th><th>누적 에너지</th><th>메모</th></tr></thead><tbody>
+<tr><td>Lv.1</td><td>240</td><td>240</td><td>첫 보상 단계</td></tr>
+<tr><td>Lv.2</td><td>400</td><td>640</td><td></td></tr>
+<tr><td>Lv.3</td><td>600</td><td>1,240</td><td></td></tr>
+<tr><td>Lv.4</td><td>800</td><td><b>2,040</b></td><td>Lv.1~4 합계</td></tr>
+<tr><td>Lv.5 보상 1개</td><td>1,200</td><td><b>3,240</b></td><td>Lv.5 보상마다 추가 비용</td></tr>
+<tr><td>Lv.5 보상 2개</td><td>2,400</td><td><b>4,440</b></td><td>전체 누적 기준</td></tr>
+<tr><td>Lv.5 보상 3개</td><td>3,600</td><td><b>5,640</b></td><td>전체 누적 기준</td></tr>
+</tbody></table></div>
+<p class="muted small">주간 수급량은 영상에서 약 2,240으로 설명합니다. 주간 무료 수급량을 약 2,240으로 잡으면 2주분은 약 4,480이며, Lv.1~4와 Lv.5 보상 2개를 합친 4,440을 약간 넘습니다.</p>
+<div class="calc">
+<h3>내 에너지로 어디까지 가능할까?</h3>
+<div class="cols"><div><label for="energyInput">현재 보유 에너지</label><input id="energyInput" type="number" min="0" value="4480"></div><div><label for="weeklyInput">주간 예상 수급량</label><input id="weeklyInput" type="number" min="0" value="2240"></div></div>
+<button type="button" onclick="calc()">계산하기</button><div class="result" id="calcResult" aria-live="polite">현재 에너지로 Lv.1~4와 Lv.5 보상 2개를 노릴 수 있습니다. (필요 4,440)</div>
+</div>
+</section>
+
+<section id="rewards">
+<h2>보상 선택 가이드</h2>
+<h3>Lv.5 — 가장 신중하게 선택할 구간</h3>
+<p>영상에서는 Lv.5의 특별 보상을 가장 중요하게 봅니다. 보상 로테이션을 확인하고, 내 계정에 장기적으로 도움이 되는 보상을 우선하세요.</p>
+<div class="cols">
+<div class="card"><h3>Lucky Statue</h3><p>매일 던전에서 보상을 두 배로 획득할 기회를 제공하는 유물로 소개됩니다. 장비나 파편 등 일일 파밍을 장기적으로 돕는 선택지입니다.</p><span class="tag">장기 파밍 가치</span></div>
+<div class="card"><h3>Primal Gem</h3><p>보석 획득량을 개선하는 보상으로 소개됩니다. 꾸준히 보석을 모으는 데 도움이 되는 장기 투자형 선택지입니다.</p><span class="tag">장기 자원 가치</span></div>
+</div>
+<div class="callout">영상의 로테이션 예시: 시즌 유물 → 특별 유물(Lucky Statue) → 직업 스킬 → 특별 유물(Primal Gem) → 시즌 유물 → Lucky Statue. 실제 순서는 변경될 수 있으므로 현재 이벤트 화면을 확인하세요.</div>
+<p><b>선택 기준:</b> 보통 왼쪽 Lv.5 보상을 먼저 확인하고, 오른쪽을 대안으로, 가운데 보상은 계정 상황에 따라 선택하는 방식으로 설명합니다. 다만 보상 자체의 가치보다 내 직업·빌드와의 적합성이 우선입니다.</p>
+
+<h3>신화 유물과 직업 스킬 중 무엇을 고를까?</h3>
+<ul>
+<li><b>무과금:</b> 대체로 강력하고 영구적인 유물을 우선하는 편이 좋다는 것이 영상 제작자의 의견입니다.</li>
+<li><b>과금·핵과금:</b> 현재 강한 직업의 핵심 스킬을 강화하거나 중요한 성능 구간(breakpoint)을 넘기는 데 스킬 선택권을 투자할 수 있습니다.</li>
+<li><b>직업 적합성:</b> 방어(Block) 중심 유물은 기사(Knight)에 더 잘 맞을 수 있고, 명중(Accuracy) 유물은 해당 능력치가 필요한 딜러에게 더 적합할 수 있습니다.</li>
+<li><b>승급 목표:</b> 유물 선택으로 신화 유물 완성 단계나 추가 능력치 해금에 가까워지는지도 확인하세요.</li>
+</ul>
+
+<h3>Lv.1~4 보상</h3>
+<div class="tablewrap"><table><thead><tr><th>단계</th><th>영상에서 언급한 선택지</th><th>선택 기준</th></tr></thead><tbody>
+<tr><td>Lv.1</td><td>Ore / Sand</td><td>장비 성장이 부족하면 Ore, 유물 강화가 병목이라면 Sand를 고려합니다.</td></tr>
+<tr><td>Lv.2</td><td>Companion Gifts</td><td>육성할 파트너가 많아 범용적으로 활용도가 높다고 평가합니다.</td></tr>
+<tr><td>Lv.3</td><td>Destiny Fruit</td><td>탐험과 추가 보상 기회를 늘리는 선택지입니다. 계정에 당장 필요한 보상이 있다면 대체 가능합니다.</td></tr>
+<tr><td>Lv.4</td><td>Legendary Auroral Badge</td><td>무과금 획득이 어렵고 유물의 영구 성장에 도움이 되는 보상으로 소개합니다. 단, Bond Trinkets로 첫 Mythic Phantom 완성 단계에 도달할 수 있다면 초반에는 그쪽이 더 나을 수 있습니다.</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="strategy">
+<h2>플레이 유형별 운영 전략</h2>
+<div class="cols">
+<div class="card"><h3>무과금 (F2P)</h3><ol class="steps"><li>한 주 동안 에너지를 모읍니다.</li><li>다음 주에 원하는 Lv.5 보상이 있는지 확인합니다.</li><li>최소 3,240을 확보한 뒤 교환을 시작합니다.</li><li>가능하면 4,440을 모아 Lv.5 보상 2개를 노립니다.</li></ol><p class="small">일반적인 운영은 1주 저장 → 다음 주 소비 반복입니다.</p></div>
+<div class="card"><h3>소과금·중과금</h3><ul><li>원하는 Lv.5 보상을 먼저 정합니다.</li><li>현재 보유량과 무료 수급량으로 부족분을 계산합니다.</li><li>부족한 만큼만 패키지로 보충하는 방식을 권합니다.</li><li>구매 전에 해당 보상이 계정에 실제로 필요한지 확인합니다.</li></ul></div>
+<div class="card"><h3>핵과금 (Whale)</h3><ul><li>매 로테이션의 Lv.5 보상을 모두 살 수 있어도 무조건 구매할 필요는 없습니다.</li><li>영구적인 자원 생산 유물과 장기 승급 가치를 우선합니다.</li><li>현재 빌드에 맞는 직업 유물·스킬인지 따져봅니다.</li><li>특정 성장 목표를 달성할 때만 추가 지출을 고려합니다.</li></ul></div>
+<div class="card"><h3>2주·3주 누적 목표</h3><p><b>2주:</b> 약 4,480 에너지. Lv.1~4 진행 후 Lv.5 보상 2개를 노리는 전략입니다.</p><p><b>3주:</b> 약 6,720 에너지 수급을 가정하면, 영상에서 제시한 Lv.5 보상 3개 포함 총비용 5,640을 충족합니다.</p><p class="small">실제 수급량과 이벤트 보상은 주차별로 확인하세요.</p></div>
+</div>
+</section>
+
+<section id="spend">
+<h2>패키지 구매 효율 (영상 속 USD 기준)</h2>
+<p class="muted">아래 가격은 영상에서 제시한 미국 달러 가격입니다. 한국 스토어 결제 가격, 환율, 플랫폼별 가격은 다를 수 있습니다.</p>
+<div class="tablewrap"><table><thead><tr><th>패키지</th><th>가격</th><th>에너지</th><th>달러당 효율</th></tr></thead><tbody>
+<tr><td>Wheel Pack</td><td>$0.99</td><td>60</td><td>약 60</td></tr>
+<tr><td>Affinity Pack</td><td>$4.99</td><td>300</td><td>약 60</td></tr>
+<tr><td>Prayer Pack</td><td>$14.99</td><td>500</td><td>약 33.4</td></tr>
+<tr><td>고가 패키지</td><td>$29.99 / $49.99 / $99.99</td><td>패키지별 상이</td><td>대략 28~33</td></tr>
+</tbody></table></div>
+<div class="callout"><b>영상의 추천 구매 순서:</b> $0.99 패키지 2개 → $4.99 패키지 2개. 이 조합은 총 $11.96에 에너지 720을 제공합니다. $14.99 이상의 패키지는 사전에 정한 목표를 달성하는 데 꼭 필요한 경우에만 고려하라는 의견입니다.</div>
+<ul><li>$29.99 Phantom 패키지는 Bond Trinkets로 중요한 Phantom 성장 단계를 완성할 수 있을 때 고려할 만하다고 설명합니다.</li><li>더 비싼 패키지는 Phantom 단계, 스킬 breakpoint, 유물 승급 등 명확한 목표가 있을 때만 구매하는 편이 좋습니다.</li><li>제작자는 개인 의견으로, 핵과금 유저에게는 주간 패키지보다 원하는 봉인된 보물을 선택할 수 있는 Grand Treasure Hunt 패키지가 더 가치 있을 수 있다고 말합니다.</li></ul>
+</section>
+
+<section id="check">
+<h2>교환하기 전 마지막 체크</h2>
+<ul>
+<li>현재 에너지가 최소 3,240 이상인가?</li>
+<li>이번 로테이션의 Lv.5 보상이 내가 원하는 보상인가?</li>
+<li>내 직업·빌드와 계정의 성장 병목을 실제로 해결해 주는가?</li>
+<li>지금 소비하는 것보다 다음 로테이션까지 저장하는 편이 낫지 않은가?</li>
+</ul>
+<div class="callout"><b>제작자의 결론:</b> 이 이벤트는 서두르는 사람보다 기다릴 수 있는 사람에게 유리합니다. 매주 초기화를 마감처럼 생각하지 말고, 원하는 보상이 나올 때까지 에너지를 모아두세요.</div>
+</section>
+</main>
+<footer class="footer"><div class="wrap">
+<p><b>자료 안내</b><br>해외 Sword × Staff 공략 영상의 스크립트를 한국어로 번역·재구성한 비공식 참고 자료입니다. 게임 개발사·운영사와 무관하며 한국 서버에서의 수치 및 보상 적용을 보증하지 않습니다.</p>
+<p>참고: <a href="https://supjigi.xyz/" target="_blank" rel="noopener">숲지기 | 소드 x 스태프 공략집</a> · <a href="https://www.prydwen.gg/sword-x-staff/guides/grand-treasure-hunt" target="_blank" rel="noopener">Prydwen Grand Treasure Hunt 참고 가이드</a></p>
+<p>친구에게 이 페이지의 주소를 공유해 주세요.</p>
+</div></footer>
+<script>
+function calc(){
+ const e=Math.max(0,Number(document.getElementById('energyInput').value)||0);
+ const w=Math.max(0,Number(document.getElementById('weeklyInput').value)||0);
+ const tiers=Math.max(0,Math.floor((e-2040)/1200));
+ const total=Math.floor(e/1200);
+ let s=`현재 보유량 ${e.toLocaleString()} 기준: `;
+ if(e<2040)s+=`Lv.1~4 진행에 ${ (2040-e).toLocaleString()} 에너지가 더 필요합니다.`;
+ else s+=`Lv.1~4 진행 후 Lv.5 보상 ${Math.min(3,tiers)}개까지 가능 범위입니다.`;
+ s+=` (Lv.1~4 + Lv.5 1개 = 3,240 / 2개 = 4,440 / 3개 = 5,640)`;
+ if(w>0){const deficit=Math.max(0,3240-e);s+=` 현재 보유량에서 Lv.5 첫 보상까지 약 ${Math.ceil(deficit/w)}주분의 주간 수급이 더 필요합니다.`;}
+ document.getElementById('calcResult').textContent=s;
+}
+</script>
+</body></html>
